@@ -1,46 +1,49 @@
 const config = require('./../config')
 const store = require('./../store')
 
-const signUp = function (data) {
+const createShoe = function (data) {
   return $.ajax({
-    url: config.apiUrl + '/sign-up',
+    url: config.apiUrl + '/movies',
     method: 'POST',
-    data: data
-  })
-}
-
-const signIn = function (data) {
-  return $.ajax({
-    url: config.apiUrl + '/sign-in',
-    method: 'POST',
-    data: data
-  })
-}
-
-const changePass = function (data) {
-  return $.ajax({
-    url: config.apiUrl + '/change-password',
-    method: 'PATCH',
-    data: data,
+    data,
+    // data: data,
     headers: {
       Authorization: 'Bearer ' + store.user.token
     }
   })
 }
 
-const signOut = function (data) {
+const getAllShoes = function () {
   return $.ajax({
-    url: config.apiUrl + '/sign-out',
-    method: 'DELETE',
+    url: config.apiUrl + '/index',
+    method: 'GET',
+    data,
     headers: {
-      Authorization: 'Bearer ' + store.user.token
+      Authorization: 'Bearer' + store.user.token
     }
+  })
+}
+
+const updateShoe = function (data) {
+  return $.ajax({
+    url: config.apiUrl + '/update',
+    method: 'POST',
+    data: data
+  })
+}
+
+
+const destroyShoe = function (data) {
+  return $.ajax({
+    url: config.apiUrl + '/destroy',
+    method: 'POST',
+    data: data
   })
 }
 
 module.exports = {
-  signUp,
-  signIn,
-  changePass,
-  signOut
+  createShoe,
+  getAllShoes,
+  updateShoe,
+  destroyShoe
 }
