@@ -37,6 +37,7 @@ const signOut = function (data) {
     }
   })
 }
+
 module.exports = {
   signUp,
   signIn,
