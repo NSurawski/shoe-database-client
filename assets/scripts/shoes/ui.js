@@ -1,20 +1,18 @@
-const store = require('./../store')
-
 
 const onCreateSuccess = function (response) {
   $('#message').text('Shoe Created Successfully!')
   $('form').trigger('reset')
 
   const shoeHtml = `
-  <h3>${response.shoe.brand}</h3>
-  <h4>Directed by: ${response.shoe.style}</h4>
+  <h3>${response.shoe.style}</h3>
+  <h4>Designed by: ${response.shoe.brand}</h4>
 `
 
-$('.movie-display').html(shoeHtml)
+  $('.shoe-display').html(shoeHtml)
 }
 
 const onCreateFailure = function (error) {
-  $('#message').text('Shoe create failed: ' + error.responseJSON.message)
+  $('#message').text('Shoe Create failed: ' + error.responseJSON.message)
 }
 
 const onUpdateSuccess = function (response) {
@@ -23,27 +21,26 @@ const onUpdateSuccess = function (response) {
 }
 
 const onUpdateFailure = function (error) {
-  $('#message').text('Shoe update failed: ' + error.responseJSON.message)
+  $('#message').text('Shoe Update failed: ' + error.responseJSON.message)
 }
 
 const onGetSuccess = function (response) {
-  $('#message').text('Indexed Shoes Successfully!')
+  $('#message').text('Got Shoes List Successfully!')
   $('form').trigger('reset')
 }
 
 const onGetFailure = function (error) {
-  $('#message').text('Shoe index failed: ' + error.responseJSON.message)
+  $('#message').text('Shoe List failed: ' + error.responseJSON.message)
 }
 
 const onDestroySuccess = function (reponse) {
-  $('#message').text('Indexed Shoes Successfully!')
+  $('#message').text('Deleted Shoe Successfully!')
   $('form').trigger('reset')
 }
 
 const onDestroyFailure = function (error) {
-  $('#message').text('Shoe index failed: ' + error.responseJSON.message)
+  $('#message').text('Delete Shoe failed: ' + error.responseJSON.message)
 }
-
 
 module.exports = {
   onCreateSuccess,

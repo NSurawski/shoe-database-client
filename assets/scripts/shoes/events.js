@@ -8,7 +8,7 @@ const onCreate = function (event) {
   const form = event.target
   const data = getFormFields(form)
 
-  api.create(data)
+  api.createShoe(data)
     .then(ui.onCreateSuccess)
     .catch(ui.onCreateFailure)
 }
@@ -19,9 +19,9 @@ const onIndex = function (event) {
   const form = event.target
   const data = getFormFields(form)
 
-  api.index(data)
-    .then(ui.onCreateSuccess)
-    .catch(ui.onCreateFailure)
+  api.getAllShoes(data)
+    .then(ui.onGetSuccess)
+    .catch(ui.onGetFailure)
 }
 
 const onUpdate = function (event) {
@@ -30,9 +30,9 @@ const onUpdate = function (event) {
   const form = event.target
   const data = getFormFields(form)
 
-  api.update(data)
-    .then(ui.onCreateSuccess)
-    .catch(ui.onCreateFailure)
+  api.updateShoe(data)
+    .then(ui.onUpdateSuccess)
+    .catch(ui.onUpdateFailure)
 }
 
 const onDestroy = function (event) {
@@ -41,9 +41,9 @@ const onDestroy = function (event) {
   const form = event.target
   const data = getFormFields(form)
 
-  api.destroy(data)
-    .then(ui.onCreateSuccess)
-    .catch(ui.onCreateFailure)
+  api.destroyShoe(data)
+    .then(ui.onDestroySuccess)
+    .catch(ui.onDestroyFailure)
 }
 
 module.exports = {

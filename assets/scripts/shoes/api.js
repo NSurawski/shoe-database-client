@@ -3,7 +3,7 @@ const store = require('./../store')
 
 const createShoe = function (data) {
   return $.ajax({
-    url: config.apiUrl + '/movies',
+    url: config.apiUrl + '/create',
     method: 'POST',
     data,
     // data: data,
@@ -13,7 +13,7 @@ const createShoe = function (data) {
   })
 }
 
-const getAllShoes = function () {
+const getAllShoes = function (data) {
   return $.ajax({
     url: config.apiUrl + '/index',
     method: 'GET',

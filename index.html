@@ -2,7 +2,7 @@
 <html>
 
 <head>
-  <title>Example</title>
+  <title>Shoe Database</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <!-- Do not add `link` tags-->
@@ -15,48 +15,55 @@
 
 <body>
   <h1>Shoe Database</h1>
-  <p id="message"></p>
-  <div class="unauthenticated">
-    <h4>Sign Up:</h4>
-    <form id="signUp">
+  <h4>A database for your shoes, like the Clueless closet!</h4>
+  <p id='message'></p>
+  <div>
+    <form id="signUp" class="unauthenticated">
+      <h5>Sign Up:</h5>
       <input name="credentials[email]" type="text" placeholder="email">
       <input name="credentials[password]" type="password" placeholder="password">
       <input name="credentials[password_confirmation]" type="password" placeholder="confirm password">
       <button id="signUpBtn" type="submit">Sign Up</button>
     </form>
-    <h4>Sign In:</h4>
-    <form id="signIn">
+    <form id="signIn" class="unauthenticated2">
+      <h5>Sign In:</h5>
       <input name="credentials[email]" type="text" placeholder="email">
       <input name="credentials[password]" type="password" placeholder="password">
       <button id="signInBtn" type="submit">Sign In</button>
     </form>
   </div>
-  <div class="authenticated">
-    <form id="changePassword" class="authenticated">
-      <h4>Change Password:</h4>
+  <div>
+    <form id="changePassword" class="authenticated3">
+      <h5>Change Password:</h5>
       <input name="passwords[old]" type="password" placeholder="old password">
       <input name="passwords[new]" type="password" placeholder="new password">
       <button type="submit" name="change-pass">Change Password</button>
     </form>
+    <div class="authenticated4">
     <button id="signOutBtn" type="button" name="click">Sign Out</button>
+      </div>
+    <div class="shoeDisplay"></div>
     <form id="createShoe">
-      <h4>Create Shoe</h4>
-      <input name="brand[brand]" type="text" placeholder="shoe brand">
-      <input name="style[style]" type="text" placeholder="shoe style">
-      <input name="type[type]" type="text" placeholder="shoe type">
-      <button id="createShoe" type="button" name="click">Create Shoe</button>
+      <h5>Create Shoe</h5>
+      <input name="shoe[brand]" type="text" placeholder="shoe brand">
+      <input name="shoe[style]" type="text" placeholder="shoe style">
+      <input name="shoe[type]" type="text" placeholder="shoe type">
+      <button id="createShoeBtn" type="submit" name="click">Create Shoe</button>
     </form>
     <form id="updateShoe">
-      <h4>Update Shoe</h4>
-      <input name="brand[brand]" type="text" placeholder="shoe brand">
-      <input name="style[style]" type="text" placeholder="shoe style">
-      <input name="type[type]" type="text" placeholder="shoe type">
-      <button id="updateShoe" type="button" name="click">Update Shoe</button>
+      <h5>Update Shoe</h5>
+      <input name="shoe[brand]" type="text" placeholder="shoe brand">
+      <input name="shoe[style]" type="text" placeholder="shoe style">
+      <input name="shoe[type]" type="text" placeholder="shoe type">
+      <button id="updateShoeBtn" type="submit" name="click">Update Shoe</button>
     </form>
-    <button id="getShoes" type="button" name="click">Get All Shoes</button>
+    <button id="getShoesBtn" type="button" name="click">Get All Shoes</button>
     <form id="deleteShoe">
-      <input type="text" name="id" placeholder="shoe ID">
-      <button id="deleteShoes" type="button" name="click">Delete A Shoe</button>
+      <h5>Delete Shoe</h5>
+      <input name="shoe[brand]" type="text" placeholder="shoe brand">
+      <input name="shoe[style]" type="text" placeholder="shoe style">
+      <input name="shoe[type]" type="text" placeholder="shoe type">
+      <button id="deleteShoeBtn" type="submit" name="click">Delete Shoe</button>
     </form>
   </div>
 </body>
