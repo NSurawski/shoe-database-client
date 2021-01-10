@@ -15,11 +15,8 @@ const onCreate = function (event) {
 
 const onIndex = function (event) {
   event.preventDefault()
-  // using event.target as the form
-  const form = event.target
-  const data = getFormFields(form)
 
-  api.getAllShoes(data)
+  api.getAllShoes()
     .then(ui.onGetSuccess)
     .catch(ui.onGetFailure)
 }

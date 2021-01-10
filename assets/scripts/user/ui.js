@@ -29,6 +29,8 @@ const onSignInSuccess = function (userData) {
   $('.authenticated4').show()
   $('.unauthenticated').hide()
   $('.unauthenticated2').hide()
+  $('.crudActions').show()
+  $('.shoeDisplay').show()
 }
 
 const onSignInFailure = function (error) {

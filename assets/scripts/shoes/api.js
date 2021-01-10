@@ -3,7 +3,7 @@ const store = require('./../store')
 
 const createShoe = function (data) {
   return $.ajax({
-    url: config.apiUrl + '/create',
+    url: config.apiUrl + '/shoes',
     method: 'POST',
     data,
     // data: data,
@@ -13,29 +13,29 @@ const createShoe = function (data) {
   })
 }
 
-const getAllShoes = function (data) {
+const getAllShoes = function () {
+  // using event.target as the form
+  console.log('Heres the Shoes!')
   return $.ajax({
-    url: config.apiUrl + '/index',
+    url: config.apiUrl + '/shoes',
     method: 'GET',
-    data,
     headers: {
-      Authorization: 'Bearer' + store.user.token
+      Authorization: 'Bearer ' + store.user.token
     }
   })
 }
 
 const updateShoe = function (data) {
   return $.ajax({
-    url: config.apiUrl + '/update',
+    url: config.apiUrl + '/shoes' + data.shoe.id,
     method: 'POST',
     data: data
   })
 }
 
-
 const destroyShoe = function (data) {
   return $.ajax({
-    url: config.apiUrl + '/destroy',
+    url: config.apiUrl + '/shoes' + data.shoe.id,
     method: 'POST',
     data: data
   })

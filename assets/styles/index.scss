@@ -1,1 +1,44 @@
 @import '~bootstrap/scss/bootstrap';
+
+body {
+  text-align: center;
+  background-color: #F7DC6F;
+  color: #0B5345;
+  font-family: 'Lobster', sans-serif;
+}
+
+h1 {
+  padding-top: 50px;
+}
+
+.actionsBody {
+  background-color: #D4AC0D;
+}
+
+.unauthenticated {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.unauthenticated2 {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.authenticated3 {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  display: none;
+}
+
+.authenticated4 {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  display: none;
+}
+
+.crudActions {
+  display: none;
+  padding-bottom: 20px;
+
+}

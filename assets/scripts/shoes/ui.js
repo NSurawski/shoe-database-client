@@ -2,13 +2,6 @@
 const onCreateSuccess = function (response) {
   $('#message').text('Shoe Created Successfully!')
   $('form').trigger('reset')
-
-  const shoeHtml = `
-  <h3>${response.shoe.style}</h3>
-  <h4>Designed by: ${response.shoe.brand}</h4>
-`
-
-  $('.shoe-display').html(shoeHtml)
 }
 
 const onCreateFailure = function (error) {
@@ -27,6 +20,21 @@ const onUpdateFailure = function (error) {
 const onGetSuccess = function (response) {
   $('#message').text('Got Shoes List Successfully!')
   $('form').trigger('reset')
+  $('.shoeDisplay').show()
+
+  const shoesList = response.shoes
+  let shoesHtml = ''
+  shoesList.forEach(shoes => {
+    const shoeHtml = (`
+  <div>
+  <h3>Brand: ${response.shoes.brand}</h3>
+  <h4>Style Name: ${response.shoes.style}</h4>
+  <h4>ID: ${response.shoes._id}</h4>
+  </div>
+`)
+    shoesHtml += shoeHtml
+  })
+  $('#shoes').html(shoesHtml)
 }
 
 const onGetFailure = function (error) {

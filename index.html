@@ -11,60 +11,70 @@
   <!-- Do not add `script` tags-->
   <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
   <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
+  <style>
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+</style>
 </head>
 
 <body>
   <h1>Shoe Database</h1>
   <h4>A database for your shoes, like the Clueless closet!</h4>
   <p id='message'></p>
-  <div>
-    <form id="signUp" class="unauthenticated">
-      <h5>Sign Up:</h5>
-      <input name="credentials[email]" type="text" placeholder="email">
-      <input name="credentials[password]" type="password" placeholder="password">
-      <input name="credentials[password_confirmation]" type="password" placeholder="confirm password">
-      <button id="signUpBtn" type="submit">Sign Up</button>
-    </form>
-    <form id="signIn" class="unauthenticated2">
-      <h5>Sign In:</h5>
-      <input name="credentials[email]" type="text" placeholder="email">
-      <input name="credentials[password]" type="password" placeholder="password">
-      <button id="signInBtn" type="submit">Sign In</button>
-    </form>
-  </div>
-  <div>
-    <form id="changePassword" class="authenticated3">
-      <h5>Change Password:</h5>
-      <input name="passwords[old]" type="password" placeholder="old password">
-      <input name="passwords[new]" type="password" placeholder="new password">
-      <button type="submit" name="change-pass">Change Password</button>
-    </form>
-    <div class="authenticated4">
-    <button id="signOutBtn" type="button" name="click">Sign Out</button>
+  <div class="actionsBody">
+    <div>
+      <form id="signUp" class="unauthenticated">
+        <h5>Sign Up:</h5>
+        <input name="credentials[email]" type="text" placeholder="email" autocomplete="on">
+        <input name="credentials[password]" type="password" placeholder="password" autocomplete="on">
+        <input name="credentials[password_confirmation]" type="password" placeholder="confirm password" autocomplete="on">
+        <button id="signUpBtn" type="submit">Sign Up</button>
+      </form>
+      <form id="signIn" class="unauthenticated2">
+        <h5>Sign In:</h5>
+        <input name="credentials[email]" type="text" placeholder="email" autocomplete="on">
+        <input name="credentials[password]" type="password" placeholder="password" autocomplete="on">
+        <button id="signInBtn" type="submit">Sign In</button>
+      </form>
+    </div>
+    <div>
+      <form id="changePassword" class="authenticated3">
+        <h5>Change Password:</h5>
+        <input name="passwords[old]" type="password" placeholder="old password">
+        <input name="passwords[new]" type="password" placeholder="new password">
+        <button type="submit" name="change-pass">Change Password</button>
+      </form>
+      <div class="authenticated4">
+        <button id="signOutBtn" type="button" name="click">Sign Out</button>
       </div>
-    <div class="shoeDisplay"></div>
-    <form id="createShoe">
-      <h5>Create Shoe</h5>
-      <input name="shoe[brand]" type="text" placeholder="shoe brand">
-      <input name="shoe[style]" type="text" placeholder="shoe style">
-      <input name="shoe[type]" type="text" placeholder="shoe type">
-      <button id="createShoeBtn" type="submit" name="click">Create Shoe</button>
-    </form>
-    <form id="updateShoe">
-      <h5>Update Shoe</h5>
-      <input name="shoe[brand]" type="text" placeholder="shoe brand">
-      <input name="shoe[style]" type="text" placeholder="shoe style">
-      <input name="shoe[type]" type="text" placeholder="shoe type">
-      <button id="updateShoeBtn" type="submit" name="click">Update Shoe</button>
-    </form>
-    <button id="getShoesBtn" type="button" name="click">Get All Shoes</button>
-    <form id="deleteShoe">
-      <h5>Delete Shoe</h5>
-      <input name="shoe[brand]" type="text" placeholder="shoe brand">
-      <input name="shoe[style]" type="text" placeholder="shoe style">
-      <input name="shoe[type]" type="text" placeholder="shoe type">
-      <button id="deleteShoeBtn" type="submit" name="click">Delete Shoe</button>
-    </form>
+      <div class="crudActions">
+
+        <form id="createShoe">
+          <h5>Create Shoe</h5>
+          <input name="shoe[brand]" type="text" placeholder="shoe brand">
+          <input name="shoe[style]" type="text" placeholder="shoe style">
+          <input name="shoe[type]" type="text" placeholder="shoe type">
+          <button id="createShoeBtn" type="submit" name="click">Create Shoe</button>
+        </form>
+        <form id="updateShoe">
+          <h5>Update Shoe</h5>
+          <input name="shoe[brand]" type="text" placeholder="shoe brand">
+          <input name="shoe[style]" type="text" placeholder="shoe style">
+          <input name="shoe[type]" type="text" placeholder="shoe type">
+          <button id="updateShoeBtn" type="submit" name="click">Update Shoe</button>
+        </form>
+        <button id="getShoesBtn" type="button" name="click">Get All Shoes</button>
+        <form id="deleteShoe">
+          <h5>Delete Shoe</h5>
+          <input name="shoe[brand]" type="text" placeholder="shoe brand">
+          <input name="shoe[style]" type="text" placeholder="shoe style">
+          <input name="shoe[type]" type="text" placeholder="shoe type">
+          <button id="deleteShoeBtn" type="submit" name="click">Delete Shoe</button>
+        </form>
+      </div>
+    </div>
+  </div>
+  <div class="shoeDisplay">
+      <p id='shoes'></p>
   </div>
 </body>
 
