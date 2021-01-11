@@ -6,6 +6,7 @@ const onCreateSuccess = function (response) {
 
 const onCreateFailure = function (error) {
   $('#message').text('Shoe Create failed: ' + error.responseJSON.message)
+  $('form').trigger('reset')
 }
 
 const onUpdateSuccess = function (response) {
@@ -15,6 +16,7 @@ const onUpdateSuccess = function (response) {
 
 const onUpdateFailure = function (error) {
   $('#message').text('Shoe Update failed: ' + error.responseJSON.message)
+  $('form').trigger('reset')
 }
 
 const onGetSuccess = function (response) {
@@ -27,9 +29,9 @@ const onGetSuccess = function (response) {
   shoesList.forEach(shoes => {
     const shoeHtml = (`
   <div>
-  <h3>Brand: ${response.shoes.brand}</h3>
-  <h4>Style Name: ${response.shoes.style}</h4>
-  <h4>ID: ${response.shoes._id}</h4>
+  <h3>Brand: ${shoes.brand}</h3>
+  <h4>Style Name: ${shoes.style}</h4>
+  <h4>ID: ${shoes._id}</h4>
   </div>
 `)
     shoesHtml += shoeHtml
@@ -39,6 +41,7 @@ const onGetSuccess = function (response) {
 
 const onGetFailure = function (error) {
   $('#message').text('Shoe List failed: ' + error.responseJSON.message)
+  $('form').trigger('reset')
 }
 
 const onDestroySuccess = function (reponse) {
@@ -48,6 +51,7 @@ const onDestroySuccess = function (reponse) {
 
 const onDestroyFailure = function (error) {
   $('#message').text('Delete Shoe failed: ' + error.responseJSON.message)
+  $('form').trigger('reset')
 }
 
 module.exports = {

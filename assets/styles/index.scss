@@ -12,20 +12,55 @@ body {
 
 h1 {
   padding-top: 50px;
+  font-style: bold;
 }
 
 #getShoesBtn {
   margin-top: 20px;
   margin-bottom: 20px;
+  background-color: #7AD7C5;
+  border-radius: 12px;
 }
 
 #updateShoe {
   margin-top: 20px;
 }
 
+#updateShoeBtn {
+  background-color: #7AD7C5;
+  border-radius: 12px;
+}
+
+#deleteShoeBtn {
+  background-color: #7AD7C5;
+  border-radius: 12px;
+}
+
 #shoes {
   margin-top: 20px;
 }
+
+#signUpBtn {
+  background-color: #7AD7C5;
+  border-radius: 12px;
+}
+
+#signInBtn {
+  background-color: #7AD7C5;
+  border-radius: 12px;
+}
+
+#changePassBtn {
+  background-color: #7AD7C5;
+  border-radius: 12px;
+}
+
+#signOutBtn {
+  background-color: #7AD7C5;
+  border-radius: 12px;
+}
+
+
 
 .actionsBody {
   align-self: center;

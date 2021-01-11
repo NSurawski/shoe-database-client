@@ -28,7 +28,10 @@ const updateShoe = function (data) {
   return $.ajax({
     url: config.apiUrl + '/shoes' + data.shoe.id,
     method: 'POST',
-    data: data
+    data,
+    headers: {
+      Authorization: 'Bearer ' + store.user.token
+    }
   })
 }
 

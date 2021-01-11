@@ -1,7 +1,7 @@
 #!/bin/bash
 
 API="http://localhost:4741"
-URL_PATH="/shoes/"
+URL_PATH="/shoes/${ID}"
 
 curl "${API}${URL_PATH}/${ID}" \
   --include \
