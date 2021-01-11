@@ -15,7 +15,6 @@ const createShoe = function (data) {
 
 const getAllShoes = function () {
   // using event.target as the form
-  console.log('Heres the Shoes!')
   return $.ajax({
     url: config.apiUrl + '/shoes',
     method: 'GET',

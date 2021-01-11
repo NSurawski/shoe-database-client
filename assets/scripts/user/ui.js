@@ -60,10 +60,19 @@ const onChangeFailure = function (error) {
 
 const onSignOutSuccess = function (userData) {
   $('#message').text('Signed Out Successfully!')
+  $('.unauthenticated').show()
+  $('.unauthenticated2').show()
   $('.authenticated').hide()
   $('.authenticated2').hide()
   $('.authenticated3').hide()
   $('.authenticated4').hide()
+  $('#createShoe').hide()
+  $('#updateShoe').hide()
+  $('#createShoe').hide()
+  $('#getShoesBtn').hide()
+  $('#deleteShoe').hide()
+  $('#shoes').hide()
+
   store.user = null
 }
 

@@ -1,6 +1,9 @@
 @import '~bootstrap/scss/bootstrap';
 
 body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   text-align: center;
   background-color: #F7DC6F;
   color: #0B5345;
@@ -11,8 +14,24 @@ h1 {
   padding-top: 50px;
 }
 
+#getShoesBtn {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+#updateShoe {
+  margin-top: 20px;
+}
+
+#shoes {
+  margin-top: 20px;
+}
+
 .actionsBody {
+  align-self: center;
   background-color: #D4AC0D;
+  width: 500px;
+  border: 4px dotted #0B5345;
 }
 
 .unauthenticated {
