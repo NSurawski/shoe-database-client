@@ -19,6 +19,11 @@ I am going to make a website for  users to create their own shoe library for sho
 
 (https://imgur.com/JWgVjiz)
 
+## Project Links
+
+Client Deplayed Page (https://nsurawski.github.io/shoe-database-client/)
+Client Repo (https://github.com/NSurawski/shoe-database-client)
+
 ## Technologies Used
 
 HTML/CSS
