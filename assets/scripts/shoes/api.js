@@ -5,8 +5,7 @@ const createShoe = function (data) {
   return $.ajax({
     url: config.apiUrl + '/shoes',
     method: 'POST',
-    data,
-    // data: data,
+    data: data,
     headers: {
       Authorization: 'Bearer ' + store.user.token
     }
@@ -25,20 +24,22 @@ const getAllShoes = function () {
 }
 
 const updateShoe = function (data) {
+  // console.log('data is ', data)
+  // console.log('id is ', data.shoe.id)
   return $.ajax({
-    url: config.apiUrl + '/shoes' + data.shoe.id,
-    method: 'POST',
-    data,
+    url: config.apiUrl + '/shoes/' + data.shoe.id,
+    method: 'PATCH',
     headers: {
       Authorization: 'Bearer ' + store.user.token
-    }
+    },
+    data: data
   })
 }
 
 const destroyShoe = function (data) {
   return $.ajax({
-    url: config.apiUrl + '/shoes' + data.shoe.id,
-    method: 'POST',
+    url: config.apiUrl + '/shoes/' + data.shoe.id,
+    method: 'DELETE',
     data: data
   })
 }

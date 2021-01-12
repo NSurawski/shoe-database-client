@@ -7,12 +7,37 @@ body {
   text-align: center;
   background-color: #F7DC6F;
   color: #0B5345;
-  font-family: 'Lobster', sans-serif;
+  font-family: 'Noto Sans JP', sans-serif;
 }
 
 h1 {
   padding-top: 50px;
+  font-family: 'Lobster', sans-serif;
   font-style: bold;
+}
+
+h3 {
+  font-family: 'Noto Sans JP', sans-serif;
+  font-style: bold;
+  margin-top: 10px;
+}
+
+h4 {
+  font-family: 'Lobster', sans-serif;
+}
+
+h5 {
+  font-family: 'Noto Sans JP', sans-serif;
+}
+
+#subtitle {
+  font-family: 'Lobster', sans-serif;
+}
+
+#createShoeBtn {
+  background-color: #7AD7C5;
+  border-radius: 12px;
+  margin-top: 10px;
 }
 
 #getShoesBtn {
@@ -29,11 +54,15 @@ h1 {
 #updateShoeBtn {
   background-color: #7AD7C5;
   border-radius: 12px;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 
 #deleteShoeBtn {
   background-color: #7AD7C5;
   border-radius: 12px;
+  margin-top: 10px;
+  margin-bottom: 20px;
 }
 
 #shoes {
@@ -53,6 +82,7 @@ h1 {
 #changePassBtn {
   background-color: #7AD7C5;
   border-radius: 12px;
+  margin-top: 10px;
 }
 
 #signOutBtn {

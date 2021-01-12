@@ -1,6 +1,8 @@
+const store = require('./../store')
 
 const onCreateSuccess = function (response) {
   $('#message').text('Shoe Created Successfully!')
+  store.shoe = response.shoe
   $('form').trigger('reset')
 }
 
@@ -30,8 +32,9 @@ const onGetSuccess = function (response) {
     const shoeHtml = (`
   <div>
   <h3>Brand: ${shoes.brand}</h3>
-  <h4>Style Name: ${shoes.style}</h4>
-  <h4>ID: ${shoes._id}</h4>
+  <h5>Style Name: ${shoes.style}</h5>
+  <h5>Type: ${shoes.type}</h5>
+  <h5>ID: ${shoes._id}</h5>
   </div>
 `)
     shoesHtml += shoeHtml

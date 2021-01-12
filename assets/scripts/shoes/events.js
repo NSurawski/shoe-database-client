@@ -25,9 +25,9 @@ const onUpdate = function (event) {
   event.preventDefault()
   // using event.target as the form
   const form = event.target
-  const data = getFormFields(form)
+  const updatedData = getFormFields(form)
 
-  api.updateShoe(data)
+  api.updateShoe(updatedData)
     .then(ui.onUpdateSuccess)
     .catch(ui.onUpdateFailure)
 }
