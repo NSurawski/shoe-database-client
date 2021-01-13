@@ -24,8 +24,8 @@ const getAllShoes = function () {
 }
 
 const updateShoe = function (data) {
-  // console.log('data is ', data)
-  // console.log('id is ', data.shoe.id)
+  console.log('data is ', data)
+  console.log('id is ', data.shoe.id)
   return $.ajax({
     url: config.apiUrl + '/shoes/' + data.shoe.id,
     method: 'PATCH',

@@ -30,6 +30,15 @@ h5 {
   font-family: 'Noto Sans JP', sans-serif;
 }
 
+// resubmit - hover state
+// button {
+//   background-color: #7AD7C5;
+   //a:hover {
+      //background-color: #D17EFA;
+   //}
+// }
+
+
 #subtitle {
   font-family: 'Lobster', sans-serif;
 }
@@ -69,6 +78,7 @@ h5 {
   margin-top: 20px;
   background-color: #B7FDEF;
   width: 300px;
+  margin: 30px;
 }
 
 #signUpBtn {
@@ -101,30 +111,43 @@ h5 {
   border: 4px dotted #0B5345;
 }
 
+.authenticated {
+  display: none;
+}
+
 .unauthenticated {
   padding-top: 20px;
   padding-bottom: 20px;
 }
 
-.unauthenticated2 {
-  padding-top: 20px;
-  padding-bottom: 20px;
-}
-
-.authenticated3 {
-  padding-top: 20px;
-  padding-bottom: 20px;
+.shoeDisplay {
   display: none;
 }
 
-.authenticated4 {
-  padding-top: 20px;
-  padding-bottom: 20px;
-  display: none;
-}
+// .unauthenticated2 {
+//   padding-top: 20px;
+//   padding-bottom: 20px;
+// }
+
+// .authenticated3 {
+//   padding-top: 20px;
+//   padding-bottom: 20px;
+//   display: none;
+// }
+
+// .authenticated4 {
+//   padding-top: 20px;
+//   padding-bottom: 20px;
+//   display: none;
+// }
 
 .crudActions {
   display: none;
   padding-bottom: 20px;
 
+}
+
+.shoeDisplay {
+  display: flex;
+  justify-content: center;
 }
