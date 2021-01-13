@@ -30,7 +30,7 @@ const onSignInSuccess = function (userData) {
   $('.unauthenticated').hide()
   $('.unauthenticated2').hide()
   $('.crudActions').show()
-  $('.shoeDisplay').show()
+  // $('.shoeDisplay').show()
 }
 
 const onSignInFailure = function (error) {
