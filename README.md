@@ -44,3 +44,5 @@ I spent a majority of my project time working on my CRUD actions. I was able to 
 
 1. Update a single resource
 2. Delete a single resource
+
+As of 1/16 i have solved both the update and delete issue for my app.

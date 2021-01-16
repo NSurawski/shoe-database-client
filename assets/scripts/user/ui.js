@@ -4,9 +4,9 @@ const store = require('./../store')
 const onSignUpSuccess = function (userData) {
   $('#message').text('Signed Up Successfully!')
   $('form').trigger('reset')
-  $('.unauthenticated').hide()
-  $('.authenticated3').hide()
-  $('.authenticated4').hide()
+  $('#signIn').show()
+  $('.authenticated').hide()
+  // $('.').hide()
 }
 
 const onSignUpFailure = function (error) {

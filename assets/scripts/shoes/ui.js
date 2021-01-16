@@ -50,6 +50,9 @@ const onGetFailure = function (error) {
 const onDestroySuccess = function (reponse) {
   $('#message').text('Deleted Shoe Successfully!')
   $('form').trigger('reset')
+  $('.authenticated').show()
+  $('.unauthenticated').hide()
+  $('.crudActions').show()
 }
 
 const onDestroyFailure = function (error) {

@@ -13,7 +13,6 @@ const createShoe = function (data) {
 }
 
 const getAllShoes = function () {
-  // using event.target as the form
   return $.ajax({
     url: config.apiUrl + '/shoes',
     method: 'GET',
@@ -24,8 +23,8 @@ const getAllShoes = function () {
 }
 
 const updateShoe = function (data) {
-  console.log('data is ', data)
-  console.log('id is ', data.shoe.id)
+  // console.log('data is ', data)
+  // console.log('id is ', data.shoe.id)
   return $.ajax({
     url: config.apiUrl + '/shoes/' + data.shoe.id,
     method: 'PATCH',
@@ -36,10 +35,15 @@ const updateShoe = function (data) {
   })
 }
 
-const destroyShoe = function (id) {
+const destroyShoe = function (data) {
+  console.log('Shoe is ' + data.shoe.id)
   return $.ajax({
-    url: config.apiUrl + '/shoes/' + id,
-    method: 'DELETE'
+    url: config.apiUrl + '/shoes/' + data.shoe.id,
+    method: 'DELETE',
+    headers: {
+      Authorization: 'Bearer ' + store.user.token
+    },
+    data: data
   })
 }
 
