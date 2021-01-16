@@ -36,7 +36,7 @@ const updateShoe = function (data) {
 }
 
 const destroyShoe = function (data) {
-  console.log('Shoe is ' + data.shoe.id)
+  // console.log('Shoe is ' + data.shoe.id)
   return $.ajax({
     url: config.apiUrl + '/shoes/' + data.shoe.id,
     method: 'DELETE',
