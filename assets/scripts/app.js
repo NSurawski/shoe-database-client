@@ -3,6 +3,7 @@
 // const example = require('./example')
 const userEvents = require('./user/events')
 const shoeEvents = require('./shoes/events')
+const commentEvents = require('./comments/events')
 // use require without a reference to ensure a file is bundled
 
 $(() => {
@@ -15,4 +16,5 @@ $(() => {
   $('#updateShoe').on('submit', shoeEvents.onUpdate)
   $('#getShoesBtn').on('click', shoeEvents.onIndex)
   $('#deleteShoe').on('submit', shoeEvents.onDestroy)
+  $('createComment').on('submit', commentEvents.onCreate)
 })

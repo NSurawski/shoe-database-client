@@ -73,6 +73,13 @@
           <input name="shoe[style]" type="text" placeholder="shoe style"> -->
           <button id="deleteShoeBtn" type="submit" name="click">Delete Shoe</button>
         </form>
+        <form id="createComment">
+          <h4>Add a Comment</h4>
+          <input name="comment[author]" type="text" placeholder="author">
+          <input name="comment[content]" type="text" placeholder="comment">
+          <input name="shoe[id]" type="text" placeholder="shoe ID">
+          <button id="createCommentBtn" type="submit" name="click">Create Comment</button>
+        </form>
       </div>
       <button id="signOutBtn" type="button" name="click">Sign Out</button>
     </div>
@@ -80,6 +87,7 @@
 
   <div class="shoeDisplay">
     <p id='shoes'></p>
+    <p id='comment'></p>
   </div>
 </body>
 
