@@ -6,7 +6,6 @@ const onSignUpSuccess = function (userData) {
   $('form').trigger('reset')
   $('#signIn').show()
   $('.authenticated').hide()
-  // $('.').hide()
 }
 
 const onSignUpFailure = function (error) {

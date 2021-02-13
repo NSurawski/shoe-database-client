@@ -40,7 +40,7 @@
       </form>
     </div>
 
-    <div class ="authenticated">
+    <div class="authenticated">
       <form id="changePassword">
         <h4>Change Password:</h4>
         <input name="passwords[old]" type="password" placeholder="old password">
@@ -51,14 +51,14 @@
       <div class="crudActions">
         <button id="getShoesBtn" type="button" name="click">Get My Shoe List</button>
         <form id="createShoe">
-          <h4>Create Shoe</h4>
+          <h4>Create a Shoe:</h4>
           <input name="shoe[brand]" type="text" placeholder="shoe brand">
           <input name="shoe[style]" type="text" placeholder="shoe style">
           <input name="shoe[type]" type="text" placeholder="shoe type">
           <button id="createShoeBtn" type="submit" name="click">Create Shoe</button>
         </form>
         <form id="updateShoe">
-          <h4>Update Shoe</h4>
+          <h4>Update a Shoe:</h4>
           <input name="shoe[id]" type="text" placeholder="shoe ID">
           <input name="shoe[brand]" type="text" placeholder="shoe brand">
           <input name="shoe[type]" type="text" placeholder="shoe type">
@@ -66,25 +66,29 @@
           <button id="updateShoeBtn" type="submit" name="click">Update Shoe</button>
         </form>
         <form id="deleteShoe">
-          <h4>Delete Shoe</h4>
-         <input name="shoe[id]" type="text" placeholder="shoe ID">
+          <h4>Delete a Shoe:</h4>
+          <input name="shoe[id]" type="text" placeholder="shoe ID">
           <!-- <input name="shoe[brand]" type="text" placeholder="shoe brand">
           <input name="shoe[type]" type="text" placeholder="shoe type">
           <input name="shoe[style]" type="text" placeholder="shoe style"> -->
           <button id="deleteShoeBtn" type="submit" name="click">Delete Shoe</button>
         </form>
         <form id="createComment">
-          <h4>Add a Comment</h4>
+          <h4>Add a Note:</h4>
           <input name="comment[author]" type="text" placeholder="author">
           <input name="comment[content]" type="text" placeholder="comment">
           <input name="shoe[id]" type="text" placeholder="shoe ID">
-          <button id="createCommentBtn" type="submit" name="click">Create Comment</button>
+          <button id="createCommentBtn" type="submit" name="click">Create Note</button>
+        </form>
+        <form id="deleteComment">
+          <h4>Delete a Note:</h4>
+          <input name="comment[id]" type="text" placeholder="comment ID" />
+          <button id="deleteCommentBtn" type="submit" name="click">Delete Note</button>
         </form>
       </div>
       <button id="signOutBtn" type="button" name="click">Sign Out</button>
     </div>
   </div>
-
   <div class="shoeDisplay">
     <p id='shoes'></p>
     <p id='comment'></p>

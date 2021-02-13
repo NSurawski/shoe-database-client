@@ -14,7 +14,7 @@ const createComment = function (data) {
 
 const destroyComment = function (data) {
   return $.ajax({
-    url: config.apiUrl + '/shoes',
+    url: config.apiUrl + '/shoes' + data.comment.id,
     method: 'DELETE',
     headers: {
       Authorization: 'Bearer' + store.user.token

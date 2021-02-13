@@ -30,48 +30,24 @@ h5 {
   font-family: 'Noto Sans JP', sans-serif;
 }
 
-// resubmit - hover state
-// button {
-//   background-color: #7AD7C5;
-   //a:hover {
-      //background-color: #D17EFA;
-   //}
-// }
+button {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  background-color: #7AD7C5;
+  border-radius: 12px;
+}
 
 
 #subtitle {
   font-family: 'Lobster', sans-serif;
 }
 
-#createShoeBtn {
-  background-color: #7AD7C5;
-  border-radius: 12px;
-  margin-top: 10px;
-}
-
-#getShoesBtn {
+#changePassword {
   margin-top: 20px;
-  margin-bottom: 20px;
-  background-color: #7AD7C5;
-  border-radius: 12px;
 }
 
 #updateShoe {
   margin-top: 20px;
-}
-
-#updateShoeBtn {
-  background-color: #7AD7C5;
-  border-radius: 12px;
-  margin-top: 10px;
-  margin-bottom: 10px;
-}
-
-#deleteShoeBtn {
-  background-color: #7AD7C5;
-  border-radius: 12px;
-  margin-top: 10px;
-  margin-bottom: 20px;
 }
 
 #shoes {
@@ -79,27 +55,7 @@ h5 {
   background-color: #B7FDEF;
   width: 300px;
   margin: 30px;
-}
-
-#signUpBtn {
-  background-color: #7AD7C5;
-  border-radius: 12px;
-}
-
-#signInBtn {
-  background-color: #7AD7C5;
-  border-radius: 12px;
-}
-
-#changePassBtn {
-  background-color: #7AD7C5;
-  border-radius: 12px;
-  margin-top: 10px;
-}
-
-#signOutBtn {
-  background-color: #7AD7C5;
-  border-radius: 12px;
+  border: 2px solid #0B5345;
 }
 
 

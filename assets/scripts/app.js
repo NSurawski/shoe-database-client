@@ -16,5 +16,6 @@ $(() => {
   $('#updateShoe').on('submit', shoeEvents.onUpdate)
   $('#getShoesBtn').on('click', shoeEvents.onIndex)
   $('#deleteShoe').on('submit', shoeEvents.onDestroy)
-  $('createComment').on('submit', commentEvents.onCreate)
+  $('#createComment').on('submit', commentEvents.onCreateComment)
+  $('#deleteComment').on('submit', commentEvents.onDestroyComment)
 })
