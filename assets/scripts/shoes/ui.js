@@ -22,21 +22,30 @@ const onUpdateFailure = function (error) {
 }
 
 const onGetSuccess = function (response) {
-  $('#message').text('Got Shoes List Successfully!')
+  $('#message').text('Got Your Shoes List Successfully!')
   $('form').trigger('reset')
   $('.shoeDisplay').show()
 
   const shoesList = response.shoes
   let shoesHtml = ''
   shoesList.forEach(shoes => {
-    const shoeHtml = (`
+    let shoeHtml = (`
   <div>
   <h3>Brand: ${shoes.brand}</h3>
   <h5>Style Name: ${shoes.style}</h5>
   <h5>Type: ${shoes.type}</h5>
   <h5>ID: ${shoes._id}</h5>
-  </div>
+  <h6>Comments:</h6>
 `)
+    shoeHtml += shoes.comments.map(function (comment) {
+      return (`
+
+      <p>${comment.author}</p>
+      <p>${comment.content}</p>
+      <p>${comment._id}</p>
+      </div>
+      `)
+    })
     shoesHtml += shoeHtml
   })
   $('#shoes').html(shoesHtml)

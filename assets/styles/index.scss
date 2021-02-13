@@ -31,7 +31,6 @@ h5 {
 }
 
 button {
-  margin-top: 20px;
   margin-bottom: 20px;
   background-color: #7AD7C5;
   border-radius: 12px;
@@ -51,11 +50,14 @@ button {
 }
 
 #shoes {
-  margin-top: 20px;
+  flex-direction: column;
   background-color: #B7FDEF;
   width: 300px;
   margin: 30px;
-  border: 2px solid #0B5345;
+}
+
+#comments {
+  flex-direction: column;
 }
 
 

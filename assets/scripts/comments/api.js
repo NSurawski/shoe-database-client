@@ -3,23 +3,24 @@ const store = require('./../store')
 
 const createComment = function (data) {
   return $.ajax({
-    url: config.apiUrl + '/shoes',
+    url: config.apiUrl + '/comments',
     method: 'POST',
     data: data,
     headers: {
-      Authorization: 'Bearer' + store.user.token
+      Authorization: 'Bearer ' + store.user.token
     }
   })
 }
 
 const destroyComment = function (data) {
   return $.ajax({
-    url: config.apiUrl + '/shoes' + data.comment.id,
+    url: config.apiUrl + '/comments/' + data.comment.id,
     method: 'DELETE',
+    data: data,
     headers: {
-      Authorization: 'Bearer' + store.user.token
-    },
-    data: data
+      Authorization: 'Bearer ' + store.user.token
+    }
+
   })
 }
 

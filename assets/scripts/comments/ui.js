@@ -7,20 +7,7 @@ const onCommentSuccess = function (response) {
   $('.authenticated').show()
   $('.unauthenticated').hide()
   $('.crudActions').show()
-  // should line 18 be shoes._id? tried but got linter error
-  const commentShow = response.comments
-  let commentsHtml = ''
-  commentShow.forEach(comment => {
-    const commentHtml = (`
-  <div>
-  <h5>Author: ${comment.author}</h5>
-  <h5>Comment: ${comment.content}</h5>
-  <h5>ID: ${comment._id}</h5>
-  </div>
-  `)
-    commentsHtml += commentHtml
-  })
-  $('#comments').html(commentsHtml)
+  $('#shoes').html('')
 }
 
 const onCommentFailure = function (error) {
