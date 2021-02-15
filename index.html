@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Shoe Database</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Do not add `link` tags-->
+  <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+
+  <!-- Do not add `script` tags-->
+  <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
+  <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+  </style>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap');
+  </style>
+</head>
+
+<body>
+  <h1>Shoe Library</h1>
+  <h4 id="subtitle">A personal library for your shoe collection, like the Clueless closet!</h4>
+  <p id='message'></p>
+  <div class="actionsBody">
+    <div class="unauthenticated">
+      <form id="signUp">
+        <h4>Sign Up:</h4>
+        <input name="credentials[email]" type="text" placeholder="email" autocomplete="on">
+        <input name="credentials[password]" type="password" placeholder="password" autocomplete="on">
+        <input name="credentials[password_confirmation]" type="password" placeholder="confirm password" autocomplete="on">
+        <button id="signUpBtn" type="submit">Sign Up</button>
+      </form>
+      <form id="signIn">
+        <h4>Sign In:</h4>
+        <input name="credentials[email]" type="text" placeholder="email" autocomplete="on">
+        <input name="credentials[password]" type="password" placeholder="password" autocomplete="on">
+        <button id="signInBtn" type="submit">Sign In</button>
+      </form>
+    </div>
+
+    <div class="authenticated">
+      <form id="changePassword">
+        <h4>Change Password:</h4>
+        <input name="passwords[old]" type="password" placeholder="old password">
+        <input name="passwords[new]" type="password" placeholder="new password">
+        <button id="changePassBtn" type="submit" name="change-pass">Change Password</button>
+      </form>
+
+      <div class="crudActions">
+        <button id="getShoesBtn" type="button" name="click">Get My Shoe List</button>
+        <form id="createShoe">
+          <h4>Create a Shoe:</h4>
+          <input name="shoe[brand]" type="text" placeholder="shoe brand">
+          <input name="shoe[style]" type="text" placeholder="shoe style">
+          <input name="shoe[type]" type="text" placeholder="shoe type">
+          <button id="createShoeBtn" type="submit" name="click">Create Shoe</button>
+        </form>
+        <form id="updateShoe">
+          <h4>Update a Shoe:</h4>
+          <input name="shoe[id]" type="text" placeholder="shoe ID">
+          <input name="shoe[brand]" type="text" placeholder="shoe brand">
+          <input name="shoe[type]" type="text" placeholder="shoe type">
+          <input name="shoe[style]" type="text" placeholder="shoe style">
+          <button id="updateShoeBtn" type="submit" name="click">Update Shoe</button>
+        </form>
+        <form id="deleteShoe">
+          <h4>Delete a Shoe:</h4>
+          <input name="shoe[id]" type="text" placeholder="shoe ID">
+          <!-- <input name="shoe[brand]" type="text" placeholder="shoe brand">
+          <input name="shoe[type]" type="text" placeholder="shoe type">
+          <input name="shoe[style]" type="text" placeholder="shoe style"> -->
+          <button id="deleteShoeBtn" type="submit" name="click">Delete Shoe</button>
+        </form>
+        <form id="createComment">
+          <h4>Add a Note:</h4>
+          <input name="comment[author]" type="text" placeholder="author">
+          <input name="comment[content]" type="text" placeholder="note">
+          <input name="shoe[id]" type="text" placeholder="shoe ID">
+          <button id="createCommentBtn" type="submit" name="click">Create Note</button>
+        </form>
+        <form id="deleteComment">
+          <h4>Delete a Note:</h4>
+          <input name="shoe[id]" type="text" placeholder="shoe ID">
+          <input name="comment[id]" type="text" placeholder="note ID" />
+          <button id="deleteCommentBtn" type="submit" name="click">Delete Note</button>
+        </form>
+      </div>
+      <button id="signOutBtn" type="button" name="click">Sign Out</button>
+    </div>
+  </div>
+  <div class="shoeDisplay">
+    <p id='shoes'></p>
+    <p id='comments'></p>
+  </div>
+</body>
+
+</html>
