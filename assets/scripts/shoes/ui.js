@@ -35,7 +35,7 @@ const onGetSuccess = function (response) {
   <h5>Style Name: ${shoes.style}</h5>
   <h5>Type: ${shoes.type}</h5>
   <h5>ID: ${shoes._id}</h5>
-  <h6>Comments:</h6>
+  <h6>Notes:</h6>
 `)
     shoeHtml += shoes.comments.map(function (comment) {
       return (`
